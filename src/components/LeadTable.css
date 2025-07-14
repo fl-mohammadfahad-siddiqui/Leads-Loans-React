@@ -1,56 +1,82 @@
 .lead-table-container {
-  max-width: 90%;
+  max-width: 95%;
   margin: 30px auto;
   overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 .lead-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .lead-table th,
 .lead-table td {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
+  padding: 14px 18px;
   text-align: left;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
 }
 
 .lead-table th {
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 600;
 }
 
-.edit-btn,
-.delete-btn {
-  padding: 6px 12px;
-  margin-right: 6px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.lead-table td {
+  color: #444;
 }
 
-.edit-btn {
-  background-color: #28a745;
-  color: white;
-}
-
-.edit-btn:hover {
-  background-color: #218838;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-  color: white;
-}
-
-.delete-btn:hover {
-  background-color: #c82333;
-}
-
+/* Empty state */
 .no-leads {
   text-align: center;
   font-style: italic;
   margin-top: 20px;
+  color: #777;
+}
+
+/* Action icon row */
+.icon-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Common icon style */
+.action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  color: #444;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #dee2e6;
+}
+
+.action-icon:hover {
+  transform: scale(1.1);
+  background-color: #e2e6ea;
+}
+
+/* Color-coded icons */
+.action-icon.view {
+  color: #0d6efd;
+}
+
+.action-icon.edit {
+  color: #ffc107;
+}
+
+.action-icon.delete {
+  color: #dc3545;
 }

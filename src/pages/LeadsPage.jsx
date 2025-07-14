@@ -4,6 +4,7 @@ import LeadTable from '../components/LeadsTable';
 import Modal from '../components/Modal';
 import Pagination from '../components/Pagination';
 import { getLeads, deleteLead } from '../services/leadService';
+import './LeadsPage.css';
 
 const LeadsPage = () => {
   const [leads, setLeads] = useState([]);

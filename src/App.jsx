@@ -1,14 +1,16 @@
-import LeadForm from './components/LeadForm'
-import LeadsPage from './components/LeadsPage'
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LeadsPage from './pages/LeadsPage';
+import LeadDetailsPage from './pages/LeadDetailsPage';
 
 function App() {
-  
-
   return (
-    <>
-      <LeadsPage />
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<LeadsPage />} />
+      <Route path="/leads/:id" element={<LeadDetailsPage />} />
+    </Routes>
+  );
 }
 
-export default App
+
+export default App;

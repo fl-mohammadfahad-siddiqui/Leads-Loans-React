@@ -1,0 +1,37 @@
+/* Container */
+.leads-page {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f6fa;
+}
+
+/* Heading */
+.leads-page h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Form message */
+.form-message {
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout for table + pagination */
+.leads-page .table-and-pagination {
+  margin-top: 30px;
+}
