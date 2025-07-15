@@ -26,9 +26,9 @@ const LeadsTable = ({ leads, onEdit, onDelete }) => {
               <td>{lead.dob}</td>
               <td>{lead.pan_card}</td>
               <td className="icon-actions">
-                <FaEye className="action-icon view" onClick={() => navigate(`/leads/${lead.lead_id}`)} />
-                <FaEdit className="action-icon edit" onClick={() => onEdit(lead)} />
-                <FaTrash className="action-icon delete" onClick={() => onDelete(lead.lead_id)} />
+                <button title='View Lead'><FaEye className="action-icon view" onClick={() => navigate(`/leads/${lead.lead_id}`)} /></button>
+                <button title='Edit LEad'><FaEdit className="action-icon edit" onClick={() => onEdit(lead)} /></button>
+                <button title='Delete Lead'><FaTrash className="action-icon delete" onClick={() => onDelete(lead.lead_id)} /></button>
               </td>
             </tr>
           ))}

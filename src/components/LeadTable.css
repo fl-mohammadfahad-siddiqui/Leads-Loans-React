@@ -27,9 +27,20 @@
   font-weight: 600;
 }
 
+.lead-table thead {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
 .lead-table td {
   color: #444;
 }
+  
+.lead-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
 
 /* Empty state */
 .no-leads {
@@ -65,7 +76,8 @@
 
 .action-icon:hover {
   transform: scale(1.1);
-  background-color: #e2e6ea;
+  background-color: #e9ecef;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Color-coded icons */
@@ -79,4 +91,9 @@
 
 .action-icon.delete {
   color: #dc3545;
+}
+
+.icon-actions button {
+  all: unset;
+  cursor: pointer;
 }

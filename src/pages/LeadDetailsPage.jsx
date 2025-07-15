@@ -44,6 +44,7 @@ const LeadDetailsPage = () => {
   };
 
   if (!lead) return <p>Loading...</p>;
+  
 
   return (
     <div className="lead-details-page">
