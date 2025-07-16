@@ -35,3 +35,66 @@
 .leads-page .table-and-pagination {
   margin-top: 30px;
 }
+
+
+.lead-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto 10px;
+  max-width: 90%;
+}
+
+.create-lead-btn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.create-lead-btn:hover {
+  background-color: #0b5ed7;
+}
+
+
+/* Container layout */
+.filter-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 8px 12px;
+}
+
+/* Input and select elements */
+.filter-bar select,
+.filter-bar input {
+  padding: 8px 14px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus effect for better UX */
+.filter-bar select:focus,
+.filter-bar input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

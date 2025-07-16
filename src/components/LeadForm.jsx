@@ -15,7 +15,7 @@ const initialFormState = {
 function LeadForm({ selectedLead, onSuccess, setMessage }) {
   const [lead, setLead] = useState(initialFormState);
   const [errors, setErrors] = useState({});
-
+  const [formError, setFormError] = useState('');
 
   useEffect(() => {
     if (selectedLead) {
@@ -30,15 +30,6 @@ function LeadForm({ selectedLead, onSuccess, setMessage }) {
     const { name, value } = e.target;
     setLead({ ...lead, [name]: value });
   };
-
-  useEffect(() => {
-  if (selectedLead) {
-    setLead({
-      ...selectedLead,
-      dob: selectedLead.dob?.split('T')[0],
-    });
-  }
-}, [selectedLead]);
 
   const validateForm = () => {
     const newErrors = {};
@@ -73,7 +64,11 @@ function LeadForm({ selectedLead, onSuccess, setMessage }) {
       setErrors({});
     } catch (err) {
       console.error('Save failed:', err);
-      setMessage('Failed to save lead.');
+      if (err.response && err.response.data && err.response.data.message) {
+        setFormError(err.response.data.message); // New state
+      } else {
+        setFormError('Failed to save lead.');
+  }
     }
   };
 
@@ -156,6 +151,8 @@ function LeadForm({ selectedLead, onSuccess, setMessage }) {
           required
         />
         {errors.pan_card && <p className="error">{errors.pan_card}</p>}
+
+        {formError && <p className="form-error">{formError}</p>}
 
         <button type="submit">
           {selectedLead ? 'Update Lead' : 'Create Lead'}
